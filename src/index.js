@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import TextInput from './TextInput';
+import axios from 'axios';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const App =() =>{
+    return (<div className="create_account_screen">
+        <div className="create_account_form">
+            <h3>Create account</h3>
+            <p>Example of form validation built with React.</p>
+            <TextInput labelName="Name" type="text" />
+            <TextInput labelName="Email" type="email" />
+            <TextInput labelName="DOB" type="text" />
+            <TextInput labelName="Password" type="password" />
+        </div>
+    </div>);
+};
+ReactDOM.render(<App/>,document.querySelector('#root'))
